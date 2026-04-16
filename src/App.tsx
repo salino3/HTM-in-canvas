@@ -1,9 +1,10 @@
 import { Canvas } from "@react-three/fiber";
 import { FormOnWall } from "./components";
+import "./App.scss";
 
 function App() {
   return (
-    <div style={{ width: "100vw", height: "100vh", background: "#111" }}>
+    <div className="rootApp">
       {/* fov: Field of View */}
       <Canvas camera={{ position: [-2, 1, 5], fov: 80 }}>
         <ambientLight intensity={1} />
