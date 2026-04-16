@@ -18,12 +18,12 @@ export const FormOnWall: React.FC = () => {
         distanceFactor={5} // Adjusts the "scale" of the HTML relative to 3D units
         position={[0, 0, 0.01]} // Slightly in front of the wall to prevent flickering
       >
-        <div className={styles.formContainer}>
+        <form className={styles.formContainer}>
           <h1>Room Settings</h1>
           <input type="range" min="0" max="10" />
           <input type="text" placeholder="Wall Label..." />
           <button onClick={() => alert("Saved!")}>Save Changes</button>
-        </div>
+        </form>
       </Html>
     </group>
   );
