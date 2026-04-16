@@ -19,10 +19,12 @@ export const FormOnWall: React.FC = () => {
         position={[0, 0, 0.01]} // Slightly in front of the wall to prevent flickering
       >
         <form className={styles.formContainer}>
-          <h1>Room Settings</h1>
+          <h1 className="title">Room Settings</h1>
           <input type="range" min="0" max="10" />
           <input type="text" placeholder="Wall Label..." />
-          <button onClick={() => alert("Saved!")}>Save Changes</button>
+          <button className={styles["button"]} onClick={() => alert("Saved!")}>
+            Save Changes
+          </button>
         </form>
       </Html>
     </group>

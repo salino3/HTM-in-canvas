@@ -20,7 +20,7 @@
     box-sizing: border-box;
   }
 
-  button {
+  .button {
     background: #646cff;
     color: white;
     padding: 12px 24px;
@@ -32,4 +32,8 @@
       background: #535bf2;
     }
   }
+}
+
+:global(.title) {
+  color: rgb(0, 247, 255);
 }
