@@ -1,7 +1,12 @@
 import React, { type JSX } from "react";
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import { ContainerLayout } from "../layouts";
-import { Lazyform3dPage, LazyHomePage, routesApp } from "./interface-routes";
+import {
+  Lazyform3dPage,
+  LazyHomePage,
+  LazySignupFormdPage,
+  routesApp,
+} from "./interface-routes";
 
 interface PropsRoutes {
   path: string;
@@ -13,10 +18,13 @@ const routes: PropsRoutes[] = [
     path: routesApp?.root,
     element: <LazyHomePage />,
   },
-
   {
     path: routesApp?.form3d,
     element: <Lazyform3dPage />,
+  },
+  {
+    path: routesApp?.signupForm,
+    element: <LazySignupFormdPage />,
   },
 ];
 
