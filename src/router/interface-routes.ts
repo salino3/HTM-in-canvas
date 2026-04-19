@@ -24,6 +24,6 @@ export const LazyHomePage: React.LazyExoticComponent<React.FC<{}>> = lazy(
 ); // with 'export default'
 
 export const Lazyform3dPage: React.LazyExoticComponent<React.FC<{}>> = lazyLoad(
-  () => import("../components/form-on-wall/form-on-wall"), // ImportPromise
-  "FormOnWall", // ExportName
+  () => import("../components/room/room.component"), // ImportPromise
+  "Room", // ExportName
 );
