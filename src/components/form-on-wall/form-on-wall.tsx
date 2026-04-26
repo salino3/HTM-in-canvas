@@ -1,4 +1,5 @@
 import React from "react";
+import * as THREE from "three";
 import { Html } from "@react-three/drei";
 import styles from "./form-on-wall.module.scss";
 
@@ -8,7 +9,12 @@ export const FormOnWall: React.FC = () => {
       {/* 1. The Physical Wall (Optional, for shadows/occlusion) */}
       <mesh>
         <planeGeometry args={[4, 3]} />
-        <meshStandardMaterial color="#222" transparent opacity={0.5} />
+        <meshStandardMaterial
+          color="#222"
+          transparent
+          opacity={0.5}
+          side={THREE.DoubleSide}
+        />
       </mesh>
 
       {/* 2. The HTML Layer */}
