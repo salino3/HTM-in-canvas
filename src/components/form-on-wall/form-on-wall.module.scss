@@ -11,6 +11,18 @@
     font-family: sans-serif;
     border: 4px solid #646cff;
 
+    .boxTitleAndBG {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      .bg {
+        background: #c81c1c;
+        width: 7rem;
+        height: 5rem;
+        border-radius: 0.8rem;
+      }
+    }
+
     label {
       color: white;
     }

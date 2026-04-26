@@ -73,7 +73,20 @@ export const FormOnWall: React.FC<Props> = ({ roomValues, setRoomValues }) => {
           // onPointerDown={(e) => e.stopPropagation()}
           className={styles.formContainer}
         >
-          <h1 className="title">Room Settings</h1>
+          <div className={styles.boxTitleAndBG}>
+            <h1 className="title">Room Settings</h1>
+            <div
+              className={styles.bg}
+              style={{
+                backgroundColor: `rgb(${100 + dataForm.shadeRoom * 7}, 28, 28)`,
+                boxShadow: `
+      0 0 ${dataForm.shadeRoom * 2}px rgba(200, 28, 28, 0.8), 
+      0 0 ${dataForm.shadeRoom * 5}px rgba(200, 28, 28, 0.4)
+    `,
+                transition: "background-color 0.2s ease, box-shadow 0.2s ease",
+              }}
+            />
+          </div>
           <label htmlFor="shadeRoom">Shade Room</label>
           <input
             id="shadeRoom"
