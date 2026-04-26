@@ -10,7 +10,7 @@ export const FormOnWall: React.FC = () => {
       <mesh>
         <planeGeometry args={[4, 3]} />
         <meshStandardMaterial
-          color="#222"
+          color="#6e6666f8"
           transparent
           opacity={0.5}
           side={THREE.DoubleSide}
