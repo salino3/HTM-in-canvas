@@ -5,18 +5,19 @@ import styles from "./form-on-wall.module.scss";
 
 export const FormOnWall: React.FC = () => {
   return (
-    <group rotation={[0, -Math.PI / 4, 0]}>
+    // <group rotation={[0, -Math.PI / 4, 0]}> // Give it rotation
+    // to keep it flat against the wall
+    <group rotation={[0, 0, 0]}>
       {/* 1. The Physical Wall (Optional, for shadows/occlusion) */}
       <mesh>
         <planeGeometry args={[4, 3]} />
-        <meshStandardMaterial
+        <meshBasicMaterial
           color="#6e6666f8"
           transparent
           opacity={0.5}
           side={THREE.DoubleSide}
         />
       </mesh>
-
       {/* 2. The HTML Layer */}
       <Html
         transform // This is the magic: it makes the HTML act like a 3D object

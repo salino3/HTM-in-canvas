@@ -9,9 +9,18 @@ export const Room: React.FC = () => {
     <div className="rootRoom">
       {/* fov: Field of View   */}
       <Canvas camera={{ position: [-2, 1, 5], fov: 80 }}>
-        <ambientLight intensity={1} />
+        <color attach="background" args={["#111"]} />
+        <fog attach="fog" args={["#ffb115", -2, 30]} />
+        <ambientLight
+          intensity={1}
+          //  color="white"
+        />
         {/* Add a PointLight to act like a lightbulb in the room */}
-        <pointLight position={[0, 5, 0]} intensity={20} />
+        <pointLight
+          position={[0, 5, 0]}
+          intensity={20}
+          // color="white"
+        />
         {/* THE ROOM BOX */}
         <mesh scale={[10, 10, 10]}>
           <boxGeometry />
